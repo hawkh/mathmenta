@@ -1,0 +1,97 @@
+```mermaid
+flowchart TD
+    subgraph INPUT["🎯 Multimodal Input Layer"]
+        A1[📝 Text Input]
+        A2[📷 Image Upload]
+        A3[🎙️ Audio Upload]
+    end
+
+    subgraph EXTRACT["🔍 Extraction & HITL Review"]
+        B1[Claude Vision OCR\nConfidence scoring]
+        B2[OpenAI Whisper ASR\nMath phrase normalisation]
+        B3[Direct text]
+        B4{Confidence\n< threshold?}
+        B5[👤 HITL: User edits\nextracted text]
+    end
+
+    subgraph AGENTS["🤖 Multi-Agent LangGraph Pipeline"]
+        direction TB
+        C1["🔵 Parser Agent\nClean → Structured JSON\n{topic, variables, constraints}"]
+        C2{Needs\nclarification?}
+        C3["👤 HITL: Clarify\nproblem statement"]
+        C4["🟡 Router Agent\nClassify strategy\nQuery memory"]
+        C5["🟢 Solver Agent\nRAG retrieval\nPython calculator\nSolution steps"]
+        C6["🔴 Verifier Agent\nIndependent check\nDomain/edge cases"]
+        C7{Confidence\n< threshold?}
+        C8["👤 HITL: Human\napproves / corrects"]
+        C9["🟣 Explainer Agent\nStudent-friendly\nstep-by-step explanation"]
+        C10["⚫ Memory Node\nPersist to JSON store"]
+    end
+
+    subgraph RAG["📚 RAG Pipeline"]
+        D1[Knowledge Base\n.txt documents\nAlgebra / Calc / Prob / LinAlg]
+        D2[Chunking\n400 chars, 80 overlap]
+        D3[Embeddings\nsentence-transformers\nall-MiniLM-L6-v2]
+        D4[FAISS Index\nCosine similarity\nIndexFlatIP]
+        D5[Top-K Retrieval\nScored chunks\nSource citations]
+    end
+
+    subgraph MEMORY["🧠 Memory Store"]
+        E1[(JSON Store\nmemory_store.json)]
+        E2[Similar problem\nretrieval\nKeyword overlap]
+        E3[Correction rules\nfrom HITL feedback]
+    end
+
+    subgraph UI["🖥️ Streamlit UI"]
+        F1[Input mode selector]
+        F2[Extraction preview\neditable]
+        F3[Agent trace panel]
+        F4[RAG context viewer]
+        F5[Step-by-step\nexplanation]
+        F6[Confidence badge]
+        F7[Feedback buttons\n✅ ❌]
+    end
+
+    A2 --> B1
+    A3 --> B2
+    A1 --> B3
+    B1 --> B4
+    B2 --> B4
+    B3 --> C1
+    B4 -->|low confidence| B5
+    B4 -->|ok| C1
+    B5 --> C1
+
+    C1 --> C2
+    C2 -->|yes| C3
+    C3 --> C4
+    C2 -->|no| C4
+    C4 --> C5
+    C4 <-.retrieve similar.-> E2
+    C5 <-.RAG chunks.-> D5
+    C5 --> C6
+    C6 --> C7
+    C7 -->|low confidence| C8
+    C8 --> C9
+    C7 -->|verified| C9
+    C9 --> C10
+    C10 --> E1
+    E1 --> E2
+    E1 --> E3
+
+    D1 --> D2 --> D3 --> D4 --> D5
+
+    C9 --> UI
+    D5 -.sources shown.-> F4
+    C1 -.trace.-> F3
+    E2 -.past problems.-> F4
+    C6 -.confidence.-> F6
+    F7 -.feedback.-> E1
+
+    style INPUT fill:#1e3a5f,stroke:#3b82f6,color:#fff
+    style EXTRACT fill:#3b1e5f,stroke:#8b5cf6,color:#fff
+    style AGENTS fill:#1e3b2f,stroke:#10b981,color:#fff
+    style RAG fill:#3b2a1e,stroke:#f59e0b,color:#fff
+    style MEMORY fill:#1e2a3b,stroke:#06b6d4,color:#fff
+    style UI fill:#2a1e3b,stroke:#ec4899,color:#fff
+```

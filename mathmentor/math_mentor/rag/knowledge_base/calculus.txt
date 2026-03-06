@@ -1,0 +1,123 @@
+TOPIC: Calculus – Limits, Derivatives, Integration & Optimization
+SOURCE: Math Mentor Knowledge Base v1.0
+
+--- LIMITS ---
+Basic limit laws:
+  lim[f(x)±g(x)] = lim f(x) ± lim g(x)
+  lim[f(x)·g(x)] = lim f(x) · lim g(x)
+  lim[f(x)/g(x)] = lim f(x) / lim g(x)  [if lim g(x) ≠ 0]
+
+Standard limits:
+  lim(x→0) sin(x)/x = 1
+  lim(x→0) (1 - cos x)/x² = 1/2
+  lim(x→0) tan(x)/x = 1
+  lim(x→0) (eˣ - 1)/x = 1
+  lim(x→0) (aˣ - 1)/x = ln(a)
+  lim(x→0) ln(1+x)/x = 1
+  lim(x→∞) (1 + 1/x)ˣ = e
+  lim(x→0) (1 + x)^(1/x) = e
+
+L'Hôpital's Rule (for 0/0 or ∞/∞ indeterminate forms):
+  lim f(x)/g(x) = lim f'(x)/g'(x)  [apply repeatedly if needed]
+
+Squeeze Theorem: if g(x) ≤ f(x) ≤ h(x) near a and lim g = lim h = L, then lim f = L
+
+Continuity at x = a: lim(x→a) f(x) = f(a) (limit exists AND equals function value)
+
+--- DIFFERENTIATION RULES ---
+Power rule: d/dx[xⁿ] = nxⁿ⁻¹
+Constant rule: d/dx[c] = 0
+Sum/difference: d/dx[f ± g] = f' ± g'
+Product rule: d/dx[fg] = f'g + fg'
+Quotient rule: d/dx[f/g] = (f'g - fg') / g²
+Chain rule: d/dx[f(g(x))] = f'(g(x)) · g'(x)
+
+Standard derivatives:
+  d/dx[sin x] = cos x
+  d/dx[cos x] = -sin x
+  d/dx[tan x] = sec²x
+  d/dx[cot x] = -csc²x
+  d/dx[sec x] = sec x tan x
+  d/dx[csc x] = -csc x cot x
+  d/dx[eˣ] = eˣ
+  d/dx[aˣ] = aˣ ln a
+  d/dx[ln x] = 1/x
+  d/dx[logₐ x] = 1/(x ln a)
+  d/dx[arcsin x] = 1/√(1-x²)
+  d/dx[arccos x] = -1/√(1-x²)
+  d/dx[arctan x] = 1/(1+x²)
+
+Implicit differentiation: differentiate both sides w.r.t. x, treat y as function of x.
+Logarithmic differentiation: useful when base and exponent both contain x.
+  Take ln of both sides, differentiate implicitly.
+
+--- APPLICATIONS OF DERIVATIVES ---
+Increasing/Decreasing:
+  f'(x) > 0 → increasing; f'(x) < 0 → decreasing
+
+Critical points: f'(x) = 0 or undefined
+
+First derivative test:
+  f' changes + to − at c → local max
+  f' changes − to + at c → local min
+
+Second derivative test:
+  f''(c) < 0 → local max; f''(c) > 0 → local min; f''(c) = 0 → inconclusive
+
+Concavity:
+  f''(x) > 0 → concave up; f''(x) < 0 → concave down
+  Inflection point: f'' changes sign
+
+Tangent line at (a, f(a)): y - f(a) = f'(a)(x - a)
+Normal line: slope = -1/f'(a)
+
+--- OPTIMIZATION (JEE STYLE) ---
+Step-by-step:
+  1. Define variable(s) and express objective function f(x)
+  2. Find domain constraints
+  3. Compute f'(x), set = 0, solve for critical points
+  4. Use second derivative or sign chart to classify
+  5. Evaluate f at critical points AND endpoints
+  6. State maximum/minimum value and where it occurs
+
+Common optimization setups:
+  - Box with fixed surface area → maximize volume
+  - Rectangle inscribed in circle/ellipse
+  - Minimum perimeter for fixed area
+  - Shortest distance from point to curve (minimize distance²)
+
+--- INTEGRATION ---
+Basic formulas:
+  ∫xⁿ dx = xⁿ⁺¹/(n+1) + C  (n ≠ -1)
+  ∫1/x dx = ln|x| + C
+  ∫eˣ dx = eˣ + C
+  ∫aˣ dx = aˣ/ln(a) + C
+  ∫sin x dx = -cos x + C
+  ∫cos x dx = sin x + C
+  ∫sec²x dx = tan x + C
+  ∫csc²x dx = -cot x + C
+  ∫1/√(1-x²) dx = arcsin x + C
+  ∫1/(1+x²) dx = arctan x + C
+
+Techniques:
+  U-substitution: let u = g(x), du = g'(x)dx
+  Integration by parts: ∫u dv = uv - ∫v du
+    ILATE mnemonic for choosing u: Inverse trig, Log, Algebraic, Trig, Exponential
+
+Definite integral:
+  ∫ₐᵇ f(x)dx = F(b) - F(a)  [Fundamental Theorem of Calculus]
+  Area between curves: ∫ₐᵇ |f(x) - g(x)| dx
+
+--- MEAN VALUE THEOREM ---
+If f continuous on [a,b] and differentiable on (a,b):
+  ∃c ∈ (a,b) such that f'(c) = [f(b)-f(a)]/(b-a)
+
+Rolle's Theorem: if f(a) = f(b), then ∃c where f'(c) = 0
+
+--- COMMON MISTAKES ---
+- Forgetting +C in indefinite integrals
+- Chain rule: don't forget to multiply by derivative of inner function
+- L'Hôpital's: only apply to 0/0 or ∞/∞, not 0/∞
+- Sign errors in quotient rule (f'g - fg', NOT fg' - f'g)
+- Forgetting to check endpoints in closed-interval optimization
+- Substitution: must change limits when computing definite integral with substitution

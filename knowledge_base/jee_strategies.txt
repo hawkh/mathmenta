@@ -1,0 +1,187 @@
+# JEE Mathematics Problem-Solving Strategies
+
+## General Approach
+
+### Step 1: Understand the Problem
+- Read carefully and identify what's given
+- Identify what needs to be found
+- Note any constraints or conditions
+- Recognize the topic/concept being tested
+
+### Step 2: Plan Your Approach
+- Recall relevant formulas and theorems
+- Identify similar problems you've solved
+- Consider multiple approaches
+- Choose the most efficient method
+
+### Step 3: Execute
+- Work systematically
+- Show all steps clearly
+- Keep track of units and domains
+- Use proper mathematical notation
+
+### Step 4: Verify
+- Check if answer makes sense
+- Verify by substitution if possible
+- Check boundary conditions
+- Ensure answer satisfies all constraints
+
+## Topic-Specific Strategies
+
+### Algebra
+1. **Quadratic Equations**:
+   - Check discriminant for nature of roots
+   - Use Vieta's formulas for root relationships
+   - Consider graph of parabola for insights
+
+2. **Complex Numbers**:
+   - Convert to polar form for multiplication/division
+   - Use geometric interpretation
+   - Apply De Moivre's theorem for powers
+
+3. **Sequences**:
+   - Identify pattern (AP, GP, AGP, special series)
+   - Use standard formulas
+   - For tricky series, try method of differences
+
+4. **Permutations & Combinations**:
+   - Distinguish between ordered (P) and unordered (C)
+   - Use complementary counting
+   - Break complex problems into cases
+
+### Calculus
+1. **Limits**:
+   - Try direct substitution first
+   - Factor and cancel for 0/0 form
+   - Apply L'Hôpital's rule for 0/0 or ∞/∞
+   - Use standard limits
+
+2. **Differentiation**:
+   - Identify the rule needed (chain, product, quotient)
+   - Simplify before differentiating
+   - Use logarithmic differentiation for complex functions
+
+3. **Applications of Derivatives**:
+   - Draw diagrams for geometry problems
+   - Set up function to optimize
+   - Find critical points
+   - Use second derivative test
+
+4. **Integration**:
+   - Identify the type of integral
+   - Try substitution first
+   - Use integration by parts for products
+   - Apply partial fractions for rational functions
+   - Use properties of definite integrals
+
+5. **Differential Equations**:
+   - Identify the type (separable, homogeneous, linear)
+   - Apply appropriate method
+   - Don't forget the constant of integration
+
+### Coordinate Geometry
+1. **Straight Lines**:
+   - Use appropriate form (slope-intercept, point-slope, etc.)
+   - Remember formulas for distance, angle, intersection
+   - Use parametric form when helpful
+
+2. **Circles**:
+   - Standard form: (x-h)² + (y-k)² = r²
+   - General form: x² + y² + 2gx + 2fy + c = 0
+   - Use parametric form for points on circle
+
+3. **Conic Sections**:
+   - Memorize standard forms and properties
+   - Use parametric coordinates
+   - Apply focus-directrix property
+
+### Vectors and 3D Geometry
+1. **Vectors**:
+   - Use component form for calculations
+   - Apply dot and cross products appropriately
+   - Remember geometric interpretations
+
+2. **3D Geometry**:
+   - Direction ratios and cosines
+   - Equations of lines and planes
+   - Use vector methods for angles and distances
+
+## Time Management Tips
+
+### During Practice:
+1. Solve problems under timed conditions
+2. Analyze mistakes thoroughly
+3. Maintain a formula notebook
+4. Practice mental math for speed
+
+### During Exam:
+1. Scan entire paper first
+2. Start with confident problems
+3. Don't spend too long on one problem
+4. Leave time for review
+
+## Common Mistakes to Avoid
+
+### Algebra:
+- Sign errors in expansion/factorization
+- Forgetting ± in square roots
+- Division by zero cases
+- Domain restrictions
+
+### Calculus:
+- Forgetting chain rule
+- Incorrect application of L'Hôpital's rule
+- Missing critical points
+- Forgetting constant of integration
+- Not checking endpoints for extrema
+
+### Coordinate Geometry:
+- Sign errors in formulas
+- Confusing slope formulas
+- Incorrect distance calculations
+- Not considering all cases
+
+### Probability:
+- Confusing independent and mutually exclusive
+- Incorrect sample space
+- Not considering order when relevant
+- Double counting
+
+## Quick Verification Techniques
+
+1. **Dimensional Analysis**: Check if units match
+2. **Boundary Values**: Test extreme cases
+3. **Symmetry**: Check if answer respects symmetry
+4. **Approximation**: Estimate to check reasonableness
+5. **Alternative Method**: Solve using different approach if time permits
+
+## Important Formulas to Memorize
+
+### Algebra:
+- Quadratic formula: x = (-b ± √(b²-4ac))/2a
+- Sum of n terms: AP: n/2[2a+(n-1)d], GP: a(rⁿ-1)/(r-1)
+- Binomial: (x+y)ⁿ = Σ C(n,r)x^(n-r)y^r
+
+### Trigonometry:
+- sin²x + cos²x = 1
+- sin(A±B), cos(A±B), tan(A±B)
+- Double angle formulas
+- Product-to-sum formulas
+
+### Calculus:
+- Standard derivatives and integrals
+- Mean value theorem
+- Fundamental theorem of calculus
+
+### Coordinate Geometry:
+- Distance formula: √[(x₂-x₁)² + (y₂-y₁)²]
+- Section formula
+- Slope: m = (y₂-y₁)/(x₂-x₁) = tan θ
+
+## Mental Math Shortcuts
+
+1. **Squaring numbers ending in 5**: n5² = n(n+1) followed by 25
+2. **Multiplication by 11**: Add adjacent digits
+3. **Percentage calculations**: x% of y = y% of x
+4. **Fraction to decimal**: Memorize common ones (1/8, 1/16, etc.)
+5. **Square roots**: Approximate using nearby perfect squares

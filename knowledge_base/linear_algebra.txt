@@ -1,0 +1,232 @@
+# Linear Algebra for JEE
+
+## Matrices
+
+### Types of Matrices:
+- **Row Matrix**: Single row
+- **Column Matrix**: Single column
+- **Square Matrix**: Same number of rows and columns
+- **Diagonal Matrix**: All non-diagonal elements are zero
+- **Scalar Matrix**: Diagonal matrix with equal diagonal elements
+- **Identity Matrix (I)**: Diagonal matrix with all diagonal elements = 1
+- **Zero Matrix (O)**: All elements are zero
+- **Symmetric Matrix**: A = Aᵀ (aᵢⱼ = aⱼᵢ)
+- **Skew-Symmetric Matrix**: A = -Aᵀ (aᵢⱼ = -aⱼᵢ)
+- **Upper Triangular**: All elements below main diagonal are zero
+- **Lower Triangular**: All elements above main diagonal are zero
+
+### Matrix Operations:
+
+#### Addition:
+- A + B = [aᵢⱼ + bᵢⱼ]
+- Commutative: A + B = B + A
+- Associative: (A + B) + C = A + (B + C)
+
+#### Scalar Multiplication:
+- kA = [k·aᵢⱼ]
+- Distributive: k(A + B) = kA + kB
+
+#### Matrix Multiplication:
+- (AB)ᵢⱼ = Σₖ aᵢₖbₖⱼ
+- Associative: (AB)C = A(BC)
+- Distributive: A(B + C) = AB + AC
+- NOT Commutative: AB ≠ BA in general
+- AI = IA = A
+- AO = OA = O
+
+#### Transpose:
+- (Aᵀ)ᵢⱼ = Aⱼᵢ
+- (Aᵀ)ᵀ = A
+- (A + B)ᵀ = Aᵀ + Bᵀ
+- (AB)ᵀ = BᵀAᵀ
+- (kA)ᵀ = kAᵀ
+
+## Determinants
+
+### Definition (for 3×3):
+|A| = a₁₁(a₂₂a₃₃ - a₂₃a₃₂) - a₁₂(a₂₁a₃₃ - a₂₃a₃₁) + a₁₃(a₂₁a₃₂ - a₂₂a₃₁)
+
+### Properties:
+1. |A| = |Aᵀ|
+2. |AB| = |A||B|
+3. |kA| = kⁿ|A| for n×n matrix
+4. If two rows/columns are identical, |A| = 0
+5. If two rows/columns are interchanged, sign changes
+6. |A| = 0 if one row/column is a multiple of another
+
+### Minors and Cofactors:
+- Minor Mᵢⱼ: Determinant obtained by deleting ith row and jth column
+- Cofactor Cᵢⱼ = (-1)^(i+j) · Mᵢⱼ
+
+### Expansion:
+|A| = Σ aᵢⱼCᵢⱼ (along any row or column)
+
+### Important Results:
+- |adj(A)| = |A|^(n-1)
+- |A⁻¹| = 1/|A|
+
+## Adjoint and Inverse
+
+### Adjoint:
+adj(A) = [Cᵢⱼ]ᵀ (transpose of cofactor matrix)
+
+### Properties:
+- A · adj(A) = adj(A) · A = |A| · I
+- adj(AB) = adj(B) · adj(A)
+- adj(Aᵀ) = (adj(A))ᵀ
+- adj(kA) = k^(n-1) · adj(A)
+
+### Inverse:
+A⁻¹ = adj(A)/|A|, exists only if |A| ≠ 0
+
+### Properties of Inverse:
+- (A⁻¹)⁻¹ = A
+- (AB)⁻¹ = B⁻¹A⁻¹
+- (Aᵀ)⁻¹ = (A⁻¹)ᵀ
+- (Aⁿ)⁻¹ = (A⁻¹)ⁿ
+- AA⁻¹ = A⁻¹A = I
+
+## System of Linear Equations
+
+### Matrix Form:
+AX = B where:
+- A = coefficient matrix
+- X = variable matrix
+- B = constant matrix
+
+### Types of Systems:
+- **Consistent**: Has at least one solution
+- **Inconsistent**: No solution
+- **Unique Solution**: One solution
+- **Infinite Solutions**: Infinitely many solutions
+
+### Solution Methods:
+
+#### 1. Matrix Method (for unique solution):
+If |A| ≠ 0:
+X = A⁻¹B
+
+#### 2. Cramer's Rule:
+For AX = B with |A| ≠ 0:
+xᵢ = |Aᵢ|/|A|
+where Aᵢ is A with ith column replaced by B
+
+#### 3. Gaussian Elimination:
+Convert to row echelon form using elementary row operations
+
+### Homogeneous System (AX = 0):
+- Always has trivial solution X = 0
+- Non-trivial solutions exist if |A| = 0
+
+### Non-Homogeneous System (AX = B):
+- If |A| ≠ 0: Unique solution X = A⁻¹B
+- If |A| = 0:
+  - If (adj A)B = 0: Infinite solutions
+  - If (adj A)B ≠ 0: No solution
+
+## Vector Spaces
+
+### Definition:
+A vector space V over field F satisfies:
+- Closure under addition and scalar multiplication
+- Associativity and commutativity of addition
+- Existence of zero vector and additive inverses
+- Distributive laws
+
+### Subspace:
+W ⊆ V is a subspace if:
+- 0 ∈ W
+- Closed under addition
+- Closed under scalar multiplication
+
+### Linear Combination:
+v = c₁v₁ + c₂v₂ + ... + cₙvₙ
+
+### Linear Independence:
+Vectors v₁, v₂, ..., vₙ are linearly independent if:
+c₁v₁ + c₂v₂ + ... + cₙvₙ = 0 implies c₁ = c₂ = ... = cₙ = 0
+
+### Basis and Dimension:
+- **Basis**: Linearly independent spanning set
+- **Dimension**: Number of vectors in a basis
+
+## Rank of a Matrix
+
+### Definition:
+- Rank = Order of largest non-zero minor
+- Rank = Number of linearly independent rows/columns
+
+### Properties:
+- Rank(A) = Rank(Aᵀ)
+- Rank(AB) ≤ min(Rank(A), Rank(B))
+- Rank(A + B) ≤ Rank(A) + Rank(B)
+- Elementary operations don't change rank
+
+### Finding Rank:
+Reduce to row echelon form; rank = number of non-zero rows
+
+## Eigenvalues and Eigenvectors
+
+### Definition:
+For square matrix A, λ is an eigenvalue and v is an eigenvector if:
+Av = λv where v ≠ 0
+
+### Characteristic Equation:
+|A - λI| = 0
+
+### Finding Eigenvalues:
+1. Form |A - λI| = 0
+2. Solve for λ
+
+### Finding Eigenvectors:
+For each λ, solve (A - λI)v = 0
+
+### Properties:
+- Sum of eigenvalues = Trace(A) = Σaᵢᵢ
+- Product of eigenvalues = |A|
+- Eigenvalues of diagonal/triangular matrix are diagonal elements
+- If λ is eigenvalue of A, then:
+  - λⁿ is eigenvalue of Aⁿ
+  - 1/λ is eigenvalue of A⁻¹ (if A⁻¹ exists)
+  - λ + k is eigenvalue of A + kI
+
+### Cayley-Hamilton Theorem:
+Every square matrix satisfies its characteristic equation
+
+### Diagonalization:
+If A has n linearly independent eigenvectors:
+A = PDP⁻¹
+where D is diagonal matrix of eigenvalues and P is matrix of eigenvectors
+
+## Special Matrices
+
+### Orthogonal Matrix:
+AᵀA = AAᵀ = I
+- A⁻¹ = Aᵀ
+- |A| = ±1
+- Rows/columns form orthonormal set
+
+### Idempotent Matrix:
+A² = A
+- Eigenvalues are 0 or 1
+
+### Involutory Matrix:
+A² = I
+- A = A⁻¹
+- Eigenvalues are ±1
+
+### Nilpotent Matrix:
+Aᵏ = 0 for some positive integer k
+- All eigenvalues are 0
+
+### Unitary Matrix (complex):
+A*A = AA* = I
+where A* is conjugate transpose
+
+## Problem-Solving Tips:
+1. Check dimensions before matrix operations
+2. Use properties to simplify calculations
+3. For large determinants, use row operations first
+4. Verify inverse by checking AA⁻¹ = I
+5. For eigenvalues, check trace and determinant
+6. Use symmetry when present

@@ -1,0 +1,119 @@
+TOPIC: Linear Algebra – Vectors, Matrices, Determinants & Systems
+SOURCE: Math Mentor Knowledge Base v1.0
+
+--- VECTORS ---
+Vector addition: (a,b,c) + (d,e,f) = (a+d, b+e, c+f)
+Scalar multiplication: k(a,b,c) = (ka, kb, kc)
+Magnitude: |v| = √(a² + b² + c²)
+Unit vector: v̂ = v / |v|
+
+Dot product (scalar product):
+  a·b = |a||b|cosθ = a₁b₁ + a₂b₂ + a₃b₃
+  Perpendicular iff a·b = 0
+  Projection of a onto b: (a·b/|b|²)·b
+
+Cross product (vector product):
+  a × b = |i  j  k |
+           |a₁ a₂ a₃|
+           |b₁ b₂ b₃|
+  |a × b| = |a||b|sinθ
+  Parallel iff a × b = 0
+  Area of parallelogram = |a × b|
+  Area of triangle = ½|a × b|
+
+--- MATRICES ---
+Matrix addition: element-wise (same dimensions required)
+Scalar multiplication: multiply each element
+Matrix multiplication: (AB)ᵢⱼ = Σₖ Aᵢₖ · Bₖⱼ
+  AB ≠ BA in general (not commutative)
+  (AB)ᵀ = BᵀAᵀ (transpose reverses order)
+  (AB)⁻¹ = B⁻¹A⁻¹ (inverse reverses order)
+
+Transpose: (Aᵀ)ᵢⱼ = Aⱼᵢ
+Symmetric: A = Aᵀ
+Skew-symmetric: A = -Aᵀ (diagonal elements = 0)
+Orthogonal: AᵀA = I, i.e., A⁻¹ = Aᵀ
+
+Identity matrix I: AI = IA = A
+Zero matrix: A + 0 = A
+
+--- DETERMINANTS ---
+2×2: det[[a,b],[c,d]] = ad - bc
+3×3 (cofactor expansion along first row):
+  det(A) = a₁₁C₁₁ + a₁₂C₁₂ + a₁₃C₁₃
+  Cᵢⱼ = (-1)^(i+j) · Mᵢⱼ  [cofactor = signed minor]
+
+Properties:
+  det(AB) = det(A)·det(B)
+  det(Aᵀ) = det(A)
+  det(kA) = kⁿ det(A) for n×n matrix
+  Swapping two rows/cols: det changes sign
+  Multiplying row by scalar k: det multiplied by k
+  det = 0 ↔ matrix is singular (non-invertible)
+
+Singular matrix: det(A) = 0 ↔ rows/cols linearly dependent ↔ no inverse
+
+--- MATRIX INVERSE ---
+For 2×2: A = [[a,b],[c,d]]; A⁻¹ = 1/(ad-bc) · [[d,-b],[-c,a]]
+Condition: det(A) ≠ 0
+
+Adjugate method (3×3):
+  A⁻¹ = adj(A) / det(A)
+  adj(A) = transpose of cofactor matrix
+
+Row reduction (Gauss-Jordan): [A | I] → [I | A⁻¹]
+
+--- SYSTEMS OF LINEAR EQUATIONS ---
+Matrix form: AX = B
+If det(A) ≠ 0: unique solution X = A⁻¹B
+
+Cramer's Rule (for n equations, det(A) ≠ 0):
+  xᵢ = det(Aᵢ) / det(A)
+  where Aᵢ = A with i-th column replaced by B
+
+Gaussian Elimination:
+  1. Form augmented matrix [A|B]
+  2. Row reduce to echelon form
+  3. Back-substitute
+
+Consistency:
+  Consistent (solutions exist): rank(A) = rank([A|B])
+  Inconsistent (no solution): rank(A) < rank([A|B])
+  Unique solution: rank(A) = rank([A|B]) = n
+  Infinite solutions: rank(A) = rank([A|B]) < n
+
+--- EIGENVALUES & EIGENVECTORS ---
+Av = λv  →  (A - λI)v = 0
+Characteristic equation: det(A - λI) = 0
+  Solve for eigenvalues λ
+  For each λ, solve (A - λI)v = 0 for eigenvector v
+
+For 2×2:
+  λ² - (trace)λ + det = 0
+  trace = a₁₁ + a₂₂ = λ₁ + λ₂
+  det = λ₁ · λ₂
+
+--- RANK & LINEAR INDEPENDENCE ---
+Rank = number of non-zero rows in row echelon form = dimension of column space
+Vectors v₁,...,vₙ linearly independent iff no vector is a linear combination of the others
+  Equivalently: only trivial solution to c₁v₁ + ... + cₙvₙ = 0
+
+--- JEE-STYLE PROBLEM PATTERNS ---
+1. Find inverse of 3×3 using adjugate
+2. Solve 3×3 system using Cramer's or matrix inverse
+3. Find condition on parameter for inconsistent/infinite solutions
+4. Eigenvalue problems for 2×2 matrices
+5. Cross product for area/volume problems
+6. Condition for vectors to be coplanar (scalar triple product = 0)
+
+Scalar triple product: [a, b, c] = a · (b × c) = det([a; b; c])
+Volume of parallelepiped = |[a, b, c]|
+Coplanar: [a, b, c] = 0
+
+--- COMMON MISTAKES ---
+- Matrix multiplication: (m×n)(n×p) = m×p; check dimensions first
+- det(kA) ≠ k·det(A) for 3×3; it's k³·det(A)
+- Eigenvalue equation: det(A - λI) = 0, not det(A + λI)
+- When det = 0, don't try to find inverse (it doesn't exist)
+- Row reduction: allowed operations are row swap, scalar multiple, add multiple of row to another
+- Cross product is NOT commutative: a×b = -(b×a)

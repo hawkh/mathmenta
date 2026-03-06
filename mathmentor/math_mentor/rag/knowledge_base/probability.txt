@@ -1,0 +1,106 @@
+TOPIC: Probability – Formulas, Rules & Solution Templates
+SOURCE: Math Mentor Knowledge Base v1.0
+
+--- BASIC PROBABILITY ---
+P(E) = (favourable outcomes) / (total outcomes)
+0 ≤ P(E) ≤ 1
+P(E') = 1 - P(E)  [complement rule]
+Odds in favour: P(E) / P(E')
+Odds against: P(E') / P(E)
+
+--- ADDITION RULE ---
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+If A and B are mutually exclusive (A ∩ B = ∅):
+  P(A ∪ B) = P(A) + P(B)
+P(A ∪ B ∪ C) = P(A) + P(B) + P(C) - P(A∩B) - P(B∩C) - P(A∩C) + P(A∩B∩C)
+
+--- CONDITIONAL PROBABILITY ---
+P(A|B) = P(A ∩ B) / P(B),  P(B) > 0
+P(A ∩ B) = P(A|B) · P(B) = P(B|A) · P(A)  [multiplication rule]
+
+--- INDEPENDENCE ---
+A and B are independent iff:
+  P(A ∩ B) = P(A) · P(B)
+  Equivalently: P(A|B) = P(A)
+A, B, C mutually independent iff all pairwise AND triple products hold
+
+--- BAYES' THEOREM ---
+P(Aᵢ | B) = P(B | Aᵢ) · P(Aᵢ) / Σⱼ [P(B | Aⱼ) · P(Aⱼ)]
+Where A₁, A₂, ..., Aₙ are exhaustive, mutually exclusive events (partition of sample space)
+Total probability: P(B) = Σᵢ P(B|Aᵢ) · P(Aᵢ)
+
+Step-by-step Bayes:
+  1. Identify prior probabilities P(Aᵢ)
+  2. Identify likelihoods P(B|Aᵢ)
+  3. Compute P(B) via total probability
+  4. Compute posterior P(Aᵢ|B)
+
+--- DISCRETE DISTRIBUTIONS ---
+Binomial Distribution B(n, p):
+  P(X = k) = C(n,k) · pᵏ · (1-p)ⁿ⁻ᵏ
+  Mean: μ = np
+  Variance: σ² = np(1-p)
+  Use when: fixed n trials, each success/failure, prob p constant, independent
+
+Geometric Distribution:
+  P(X = k) = (1-p)^(k-1) · p  [k = 1,2,3,...]
+  Mean: 1/p
+  Models: trials until first success
+
+Poisson Distribution:
+  P(X = k) = (λᵏ · e^(-λ)) / k!
+  Mean = Variance = λ
+  Use when: rare events, large n small p (λ = np)
+
+Hypergeometric Distribution:
+  P(X = k) = C(K,k)·C(N-K,n-k) / C(N,n)
+  N = population, K = successes in population, n = sample size
+  Use when: sampling without replacement
+
+--- EXPECTED VALUE & VARIANCE ---
+E(X) = Σ xᵢ · P(xᵢ)  [discrete]
+E(aX + b) = aE(X) + b
+E(X + Y) = E(X) + E(Y)
+Var(X) = E(X²) - [E(X)]²
+Var(aX + b) = a² Var(X)
+Var(X + Y) = Var(X) + Var(Y)  [if X, Y independent]
+SD(X) = √Var(X)
+
+--- COUNTING PRINCIPLES ---
+Multiplication principle: if A can happen in m ways and B in n ways, both together: m×n ways
+Addition principle: if A and B are mutually exclusive: m+n ways
+Permutations P(n,r) = n!/(n-r)!
+Combinations C(n,r) = n!/(r!(n-r)!)
+
+JEE-STYLE PROBLEM TYPES:
+  1. Balls in boxes / cards from deck
+  2. Dice problems (use sample space enumeration for small cases)
+  3. Conditional probability with medical tests (Bayes)
+  4. Binomial: coin tosses, pass/fail experiments
+  5. Geometric: waiting time problems
+  6. Random variables: find distribution, mean, variance
+
+--- SOLUTION STRATEGY TEMPLATES ---
+For basic counting probability:
+  1. Define sample space carefully
+  2. List favourable outcomes (or use combinations)
+  3. Apply P = favourable/total
+
+For conditional probability:
+  1. Identify given event B and target event A
+  2. Compute P(A ∩ B) using tree diagram or Venn diagram
+  3. Divide by P(B)
+
+For Bayes:
+  1. Draw probability tree
+  2. Label branches with priors and likelihoods
+  3. Find leaves corresponding to observed event
+  4. Normalize by total probability of observed event
+
+--- COMMON MISTAKES ---
+- Confusing P(A|B) with P(B|A)
+- Forgetting to check for independence before multiplying probabilities
+- Not listing ALL outcomes in sample space
+- Mixing up "at least one" (use complement: 1 - P(none)) with direct enumeration
+- In binomial, forgetting to include C(n,k) combinatorial coefficient
+- Hypergeometric vs binomial: without replacement → hypergeometric

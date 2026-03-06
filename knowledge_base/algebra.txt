@@ -1,0 +1,92 @@
+# Algebra Fundamentals for JEE
+
+## Quadratic Equations
+A quadratic equation has the form ax² + bx + c = 0 where a ≠ 0.
+
+### Solutions:
+1. **Factoring Method**: Find two numbers that multiply to ac and add to b
+2. **Quadratic Formula**: x = (-b ± √(b² - 4ac)) / 2a
+3. **Completing the Square**: Rewrite as (x + p)² = q
+
+### Discriminant Analysis:
+- Δ = b² - 4ac
+- Δ > 0: Two distinct real roots
+- Δ = 0: One repeated real root
+- Δ < 0: Two complex conjugate roots
+
+### Vieta's Formulas:
+For ax² + bx + c = 0 with roots α and β:
+- α + β = -b/a
+- αβ = c/a
+
+## Complex Numbers
+A complex number z = a + bi where i² = -1
+
+### Operations:
+- Addition: (a + bi) + (c + di) = (a+c) + (b+d)i
+- Multiplication: (a + bi)(c + di) = (ac-bd) + (ad+bc)i
+- Conjugate: z̄ = a - bi
+- Modulus: |z| = √(a² + b²)
+
+### Polar Form:
+z = r(cos θ + i sin θ) = re^(iθ)
+where r = |z| and θ = arg(z)
+
+## Sequences and Series
+
+### Arithmetic Progression (AP):
+- nth term: aₙ = a + (n-1)d
+- Sum of n terms: Sₙ = n/2[2a + (n-1)d] = n/2(a + l)
+
+### Geometric Progression (GP):
+- nth term: aₙ = ar^(n-1)
+- Sum of n terms: Sₙ = a(rⁿ - 1)/(r - 1) for r ≠ 1
+- Infinite GP: S∞ = a/(1-r) for |r| < 1
+
+### Important Series:
+- Σn = n(n+1)/2
+- Σn² = n(n+1)(2n+1)/6
+- Σn³ = [n(n+1)/2]²
+
+## Permutations and Combinations
+
+### Fundamental Principle of Counting:
+If one operation can be done in m ways and another in n ways, total ways = m × n
+
+### Factorial:
+n! = n × (n-1) × (n-2) × ... × 3 × 2 × 1
+0! = 1
+
+### Permutations:
+- P(n,r) = n!/(n-r)!
+- Circular permutation: (n-1)!
+
+### Combinations:
+- C(n,r) = n!/[r!(n-r)!]
+- C(n,r) = C(n,n-r)
+- C(n,r) + C(n,r-1) = C(n+1,r)
+
+### Binomial Theorem:
+(x + y)ⁿ = Σ C(n,r) x^(n-r) y^r
+
+## Matrices and Determinants
+
+### Matrix Operations:
+- Addition: Element-wise
+- Multiplication: Row by column
+- Transpose: (Aᵀ)ᵢⱼ = Aⱼᵢ
+
+### Determinant Properties:
+- |A| = |Aᵀ|
+- |AB| = |A||B|
+- |kA| = kⁿ|A| for n×n matrix
+
+### Inverse:
+A⁻¹ = adj(A)/|A|, exists only if |A| ≠ 0
+
+## Key Problem-Solving Strategies:
+1. Identify the type of equation/expression
+2. Look for patterns (symmetry, substitution opportunities)
+3. Check boundary conditions and constraints
+4. Verify answers by substitution
+5. Consider special cases for insight

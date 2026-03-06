@@ -1,0 +1,147 @@
+# Calculus for JEE
+
+## Limits and Continuity
+
+### Standard Limits:
+- lim(x→0) sin(x)/x = 1
+- lim(x→0) (1-cos(x))/x = 0
+- lim(x→∞) (1+1/x)^x = e
+- lim(x→0) (e^x - 1)/x = 1
+- lim(x→0) ln(1+x)/x = 1
+
+### L'Hôpital's Rule:
+If lim f(x)/g(x) gives 0/0 or ∞/∞, then:
+lim f(x)/g(x) = lim f'(x)/g'(x)
+
+### Continuity:
+f(x) is continuous at x=a if:
+1. f(a) exists
+2. lim(x→a) f(x) exists
+3. lim(x→a) f(x) = f(a)
+
+## Differentiation
+
+### First Principles:
+f'(x) = lim(h→0) [f(x+h) - f(x)]/h
+
+### Standard Derivatives:
+- d/dx(xⁿ) = nx^(n-1)
+- d/dx(e^x) = e^x
+- d/dx(a^x) = a^x ln(a)
+- d/dx(ln x) = 1/x
+- d/dx(sin x) = cos x
+- d/dx(cos x) = -sin x
+- d/dx(tan x) = sec²x
+- d/dx(sec x) = sec x tan x
+- d/dx(cosec x) = -cosec x cot x
+- d/dx(cot x) = -cot²x
+- d/dx(sin⁻¹x) = 1/√(1-x²)
+- d/dx(cos⁻¹x) = -1/√(1-x²)
+- d/dx(tan⁻¹x) = 1/(1+x²)
+
+### Rules:
+- Product: (uv)' = u'v + uv'
+- Quotient: (u/v)' = (u'v - uv')/v²
+- Chain: d/dx[f(g(x))] = f'(g(x))·g'(x)
+
+### Higher Order Derivatives:
+- Second derivative: f''(x) = d²y/dx²
+- Used for concavity and inflection points
+
+## Applications of Derivatives
+
+### Tangent and Normal:
+- Tangent slope: m = f'(a) at x=a
+- Normal slope: m_normal = -1/f'(a)
+- Tangent equation: y - y₁ = m(x - x₁)
+
+### Maxima and Minima:
+- Critical points: f'(x) = 0
+- First derivative test: Check sign change of f'
+- Second derivative test: 
+  - f''(x) > 0 → local minimum
+  - f''(x) < 0 → local maximum
+  - f''(x) = 0 → inconclusive
+
+### Rolle's Theorem:
+If f is continuous on [a,b], differentiable on (a,b), and f(a)=f(b), then ∃c∈(a,b) such that f'(c)=0
+
+### Mean Value Theorem:
+If f is continuous on [a,b] and differentiable on (a,b), then:
+∃c∈(a,b) such that f'(c) = [f(b)-f(a)]/(b-a)
+
+## Integration
+
+### Indefinite Integrals:
+∫f(x)dx = F(x) + C where F'(x) = f(x)
+
+### Standard Integrals:
+- ∫xⁿ dx = x^(n+1)/(n+1) + C (n≠-1)
+- ∫(1/x) dx = ln|x| + C
+- ∫e^x dx = e^x + C
+- ∫a^x dx = a^x/ln(a) + C
+- ∫sin x dx = -cos x + C
+- ∫cos x dx = sin x + C
+- ∫sec²x dx = tan x + C
+- ∫cosec²x dx = -cot x + C
+- ∫sec x tan x dx = sec x + C
+- ∫cosec x cot x dx = -cosec x + C
+- ∫tan x dx = ln|sec x| + C
+- ∫cot x dx = ln|sin x| + C
+- ∫sec x dx = ln|sec x + tan x| + C
+- ∫cosec x dx = ln|cosec x - cot x| + C
+
+### Integration Techniques:
+1. **Substitution**: ∫f(g(x))g'(x)dx = ∫f(u)du
+2. **Integration by Parts**: ∫udv = uv - ∫vdu
+3. **Partial Fractions**: For rational functions
+4. **Trigonometric Substitution**: For √(a²-x²), √(a²+x²), √(x²-a²)
+
+### Definite Integrals:
+∫[a to b] f(x)dx = F(b) - F(a)
+
+### Properties:
+- ∫[a to b] f(x)dx = -∫[b to a] f(x)dx
+- ∫[a to b] f(x)dx = ∫[a to c] f(x)dx + ∫[c to b] f(x)dx
+- ∫[0 to a] f(x)dx = ∫[0 to a] f(a-x)dx
+- ∫[-a to a] f(x)dx = 2∫[0 to a] f(x)dx if f is even
+- ∫[-a to a] f(x)dx = 0 if f is odd
+
+## Applications of Integration
+
+### Area Under Curve:
+Area = ∫[a to b] f(x)dx
+
+### Area Between Curves:
+Area = ∫[a to b] [f(x) - g(x)]dx where f(x) ≥ g(x)
+
+### Volume of Revolution:
+- About x-axis: V = π∫[a to b] y²dx
+- About y-axis: V = π∫[c to d] x²dy
+
+### Arc Length:
+L = ∫[a to b] √(1 + (dy/dx)²)dx
+
+## Differential Equations
+
+### Order and Degree:
+- Order: Highest derivative present
+- Degree: Power of highest derivative
+
+### Solution Methods:
+1. **Variable Separable**: dy/dx = f(x)g(y)
+2. **Homogeneous**: dy/dx = f(y/x)
+3. **Linear**: dy/dx + Py = Q
+   - Solution: y·IF = ∫Q·IF dx + C
+   - IF (Integrating Factor) = e^∫P dx
+
+### Bernoulli's Equation:
+dy/dx + Py = Qyⁿ
+Substitute: z = y^(1-n)
+
+## Problem-Solving Tips:
+1. Sketch graphs to visualize problems
+2. Check domain restrictions
+3. Verify continuity before applying theorems
+4. Use symmetry when applicable
+5. Practice standard substitutions
