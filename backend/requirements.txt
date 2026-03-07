@@ -1,0 +1,25 @@
+# FastAPI Backend for Math Mentor
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+python-jose[cryptography]>=3.3.0  # JWT
+passlib[bcrypt]>=1.7.4  # Password hashing
+slowapi>=0.1.9  # Rate limiting
+python-multipart>=0.0.6  # Form data
+sqlalchemy>=2.0.23  # Database
+aiosqlite>=0.19.0  # Async SQLite
+structlog>=23.2.0  # Logging
+prometheus-fastapi-instrumentator>=6.1.0  # Metrics
+
+# Existing dependencies
+anthropic>=0.7.0
+langgraph>=0.0.20
+langchain>=0.1.0
+langchain-community>=0.0.10
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.0  # For reranker
+torch>=2.0.0
+sympy>=1.12
+pillow>=10.0.0
+openai-whisper>=20231117  # Audio transcription

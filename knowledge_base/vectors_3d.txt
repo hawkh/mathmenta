@@ -1,0 +1,310 @@
+# Vectors and 3D Geometry for JEE
+
+## Overview
+
+Vectors and 3D Geometry are crucial topics for JEE Advanced, typically accounting for 1-2 questions each. This chapter covers vector algebra, products, and their applications in three-dimensional geometry.
+
+---
+
+## 1. Vector Fundamentals
+
+### Definition
+A vector is a quantity having both magnitude and direction.
+
+### Notation
+- Vector from A to B: \(\vec{AB}\)
+- Vector magnitude: \(|\vec{a}|\) or \(a\)
+- Unit vector: \(\hat{a} = \frac{\vec{a}}{|\vec{a}|}\)
+
+### Position Vector
+For point P(x, y, z):
+Formula: \(\vec{OP} = x\hat{i} + y\hat{j} + z\hat{k}\)
+Magnitude: \(|\vec{OP}| = \sqrt{x^2 + y^2 + z^2}\)
+
+### Direction Cosines
+If \(\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}\), then:
+Formula: \(l = \cos\alpha = \frac{x}{|\vec{r}|}, m = \cos\beta = \frac{y}{|\vec{r}|}, n = \cos\gamma = \frac{z}{|\vec{r}|}\)
+
+Property: \(l^2 + m^2 + n^2 = 1\)
+
+---
+
+## 2. Vector Operations
+
+### Addition
+Formula: \(\vec{a} + \vec{b} = (a_1 + b_1)\hat{i} + (a_2 + b_2)\hat{j} + (a_3 + b_3)\hat{k}\)
+
+Properties:
+- Commutative: \(\vec{a} + \vec{b} = \vec{b} + \vec{a}\)
+- Associative: \((\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c})\)
+
+### Scalar Multiplication
+Formula: \(k\vec{a} = k(a_1\hat{i} + a_2\hat{j} + a_3\hat{k}) = ka_1\hat{i} + ka_2\hat{j} + ka_3\hat{k}\)
+
+---
+
+## 3. Dot Product (Scalar Product)
+
+### Definition
+Formula: \(\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta\)
+
+where \(\theta\) is the angle between \(\vec{a}\) and \(\vec{b}\).
+
+### Component Form
+Formula: \(\vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2 + a_3b_3\)
+
+### Properties
+- Commutative: \(\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}\)
+- Distributive: \(\vec{a} \cdot (\vec{b} + \vec{c}) = \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{c}\)
+- \(\hat{i} \cdot \hat{i} = \hat{j} \cdot \hat{j} = \hat{k} \cdot \hat{k} = 1\)
+- \(\hat{i} \cdot \hat{j} = \hat{j} \cdot \hat{k} = \hat{k} \cdot \hat{i} = 0\)
+
+### Applications
+
+**Angle between vectors:**
+Formula: \(\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}\)
+
+**Perpendicular condition:**
+\(\vec{a} \perp \vec{b} \iff \vec{a} \cdot \vec{b} = 0\)
+
+**Projection of \(\vec{a}\) on \(\vec{b}\):**
+Formula: \(\text{proj}_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2}\vec{b}\)
+
+### Worked Example 1
+Problem: Find the angle between \(\vec{a} = \hat{i} + 2\hat{j} + 3\hat{k}\) and \(\vec{b} = 2\hat{i} - \hat{j} + \hat{k}\).
+
+Solution Steps:
+1. Calculate \(\vec{a} \cdot \vec{b} = 1(2) + 2(-1) + 3(1) = 2 - 2 + 3 = 3\)
+2. Calculate \(|\vec{a}| = \sqrt{1 + 4 + 9} = \sqrt{14}\)
+3. Calculate \(|\vec{b}| = \sqrt{4 + 1 + 1} = \sqrt{6}\)
+4. Apply formula: \(\cos\theta = \frac{3}{\sqrt{14}\sqrt{6}} = \frac{3}{\sqrt{84}}\)
+5. Answer: \(\theta = \cos^{-1}\left(\frac{3}{\sqrt{84}}\right)\)
+
+---
+
+## 4. Cross Product (Vector Product)
+
+### Definition
+Formula: \(\vec{a} \times \vec{b} = |\vec{a}||\vec{b}|\sin\theta \, \hat{n}\)
+
+where \(\hat{n}\) is a unit vector perpendicular to both \(\vec{a}\) and \(\vec{b}\).
+
+### Component Form
+Formula: 
+\[\vec{a} \times \vec{b} = \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3
+\end{vmatrix}\]
+
+### Properties
+- Anti-commutative: \(\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}\)
+- Distributive: \(\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}\)
+- \(\hat{i} \times \hat{j} = \hat{k}, \hat{j} \times \hat{k} = \hat{i}, \hat{k} \times \hat{i} = \hat{j}\)
+- \(\vec{a} \times \vec{a} = \vec{0}\)
+
+### Applications
+
+**Parallel condition:**
+\(\vec{a} \parallel \vec{b} \iff \vec{a} \times \vec{b} = \vec{0}\)
+
+**Area of triangle:**
+Formula: \(\text{Area} = \frac{1}{2}|\vec{a} \times \vec{b}|\)
+
+**Area of parallelogram:**
+Formula: \(\text{Area} = |\vec{a} \times \vec{b}|\)
+
+**Unit vector perpendicular to both:**
+Formula: \(\hat{n} = \frac{\vec{a} \times \vec{b}}{|\vec{a} \times \vec{b}|}\)
+
+### Worked Example 2
+Problem: Find \(\vec{a} \times \vec{b}\) where \(\vec{a} = 2\hat{i} + \hat{j} - \hat{k}\) and \(\vec{b} = \hat{i} - 2\hat{j} + 3\hat{k}\).
+
+Solution Steps:
+1. Set up determinant:
+\[\vec{a} \times \vec{b} = \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+2 & 1 & -1 \\
+1 & -2 & 3
+\end{vmatrix}\]
+
+2. Expand:
+   - \(\hat{i}\) component: \(1(3) - (-1)(-2) = 3 - 2 = 1\)
+   - \(\hat{j}\) component: \(-[2(3) - (-1)(1)] = -[6 + 1] = -7\)
+   - \(\hat{k}\) component: \(2(-2) - 1(1) = -4 - 1 = -5\)
+
+3. Answer: \(\vec{a} \times \vec{b} = \hat{i} - 7\hat{j} - 5\hat{k}\)
+
+---
+
+## 5. Scalar Triple Product
+
+### Definition
+Formula: \([\vec{a} \, \vec{b} \, \vec{c}] = \vec{a} \cdot (\vec{b} \times \vec{c})\)
+
+### Component Form
+Formula:
+\[[\vec{a} \, \vec{b} \, \vec{c}] = \begin{vmatrix}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3
+\end{vmatrix}\]
+
+### Properties
+- Cyclic: \([\vec{a} \, \vec{b} \, \vec{c}] = [\vec{b} \, \vec{c} \, \vec{a}] = [\vec{c} \, \vec{a} \, \vec{b}]\)
+- Anti-cyclic: \([\vec{a} \, \vec{b} \, \vec{c}] = -[\vec{a} \, \vec{c} \, \vec{b}]\)
+- Coplanarity: Vectors are coplanate iff \([\vec{a} \, \vec{b} \, \vec{c}] = 0\)
+
+### Applications
+
+**Volume of tetrahedron:**
+Formula: \(V = \frac{1}{6}|[\vec{a} \, \vec{b} \, \vec{c}]|\)
+
+**Volume of parallelepiped:**
+Formula: \(V = |[\vec{a} \, \vec{b} \, \vec{c}]|\)
+
+---
+
+## 6. Vector Triple Product
+
+### Formula (BAC-CAB Rule)
+Formula: \(\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c}\)
+
+### Worked Example 3 (JEE Advanced 2021)
+Problem: If \(\vec{a}, \vec{b}, \vec{c}\) are unit vectors such that \(\vec{a} \cdot \vec{b} = 0\) and \(\vec{a} \cdot \vec{c} = 0\), find \(\vec{a} \times (\vec{b} \times \vec{c})\).
+
+Solution Steps:
+1. Apply BAC-CAB: \(\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c}\)
+2. Substitute given values: \(= (0)\vec{b} - (0)\vec{c} = \vec{0}\)
+
+Answer: \(\vec{0}\)
+
+---
+
+## 7. Lines in 3D
+
+### Vector Equation (Point-Direction Form)
+Formula: \(\vec{r} = \vec{a} + \lambda\vec{b}\)
+
+where \(\vec{a}\) is position vector of a point and \(\vec{b}\) is direction vector.
+
+### Cartesian Form
+Formula: \(\frac{x - x_1}{a} = \frac{y - y_1}{b} = \frac{z - z_1}{c}\)
+
+### Line Through Two Points
+Formula: \(\vec{r} = \vec{a} + \lambda(\vec{b} - \vec{a})\)
+
+### Worked Example 4
+Problem: Find the equation of line passing through (1, 2, 3) and (4, 5, 6).
+
+Solution Steps:
+1. Position vectors: \(\vec{a} = \hat{i} + 2\hat{j} + 3\hat{k}\), \(\vec{b} = 4\hat{i} + 5\hat{j} + 6\hat{k}\)
+2. Direction: \(\vec{b} - \vec{a} = 3\hat{i} + 3\hat{j} + 3\hat{k}\)
+3. Vector form: \(\vec{r} = (\hat{i} + 2\hat{j} + 3\hat{k}) + \lambda(3\hat{i} + 3\hat{j} + 3\hat{k})\)
+4. Cartesian form: \(\frac{x-1}{3} = \frac{y-2}{3} = \frac{z-3}{3}\)
+
+---
+
+## 8. Planes in 3D
+
+### Normal Form (Vector)
+Formula: \((\vec{r} - \vec{a}) \cdot \vec{n} = 0\)
+
+or \(\vec{r} \cdot \vec{n} = d\) where \(d = \vec{a} \cdot \vec{n}\)
+
+### Cartesian Form
+Formula: \(A(x - x_0) + B(y - y_0) + C(z - z_0) = 0\)
+
+or \(Ax + By + Cz = D\)
+
+### Plane Through Three Points
+Formula: \([\vec{r} - \vec{a}, \vec{b} - \vec{a}, \vec{c} - \vec{a}] = 0\)
+
+### Intercept Form
+Formula: \(\frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1\)
+
+### Worked Example 5
+Problem: Find the equation of plane passing through (1, 0, 0), (0, 1, 0), (0, 0, 1).
+
+Solution Steps:
+1. This is the intercept form with a = b = c = 1
+2. Answer: \(x + y + z = 1\)
+
+---
+
+## 9. Angle Between Lines and Planes
+
+### Angle Between Two Lines
+Formula: \(\cos\theta = \frac{\vec{b_1} \cdot \vec{b_2}}{|\vec{b_1}||\vec{b_2}|}\)
+
+### Angle Between Line and Plane
+Formula: \(\sin\theta = \frac{|\vec{b} \cdot \vec{n}|}{|\vec{b}||\vec{n}|}\)
+
+### Angle Between Two Planes
+Formula: \(\cos\theta = \frac{|\vec{n_1} \cdot \vec{n_2}|}{|\vec{n_1}||\vec{n_2}|}\)
+
+---
+
+## 10. Distance Formulas
+
+### Point to Plane
+Formula: \(d = \frac{|Ax_1 + By_1 + Cz_1 + D|}{\sqrt{A^2 + B^2 + C^2}}\)
+
+### Point to Line (Vector)
+Formula: \(d = \frac{|(\vec{b} - \vec{a}) \times \vec{d}|}{|\vec{d}|}\)
+
+### Between Skew Lines
+Formula: \(d = \frac{|(\vec{b} - \vec{a}) \cdot (\vec{d_1} \times \vec{d_2})|}{|\vec{d_1} \times \vec{d_2}|}\)
+
+### Between Parallel Planes
+Formula: \(d = \frac{|D_2 - D_1|}{\sqrt{A^2 + B^2 + C^2}}\)
+
+---
+
+## 11. Important Results for JEE
+
+1. **Unit vector in direction of \(\vec{a}\):** \(\hat{a} = \frac{\vec{a}}{|\vec{a}|}\)
+
+2. **Midpoint of \(\vec{AB}\):** \(\frac{\vec{a} + \vec{b}}{2}\)
+
+3. **Point dividing AB in ratio m:n:** \(\frac{m\vec{b} + n\vec{a}}{m + n}\)
+
+4. **Area of triangle ABC:** \(\frac{1}{2}|\vec{AB} \times \vec{AC}|\)
+
+5. **Centroid of triangle:** \(\frac{\vec{a} + \vec{b} + \vec{c}}{3}\)
+
+6. **Condition for collinearity:** \(\vec{b} - \vec{a} = k(\vec{c} - \vec{a})\)
+
+7. **Condition for coplanarity:** \([\vec{a} \, \vec{b} \, \vec{c}] = 0\)
+
+---
+
+## 12. JEE Previous Year Questions
+
+### Question 1 (JEE Advanced 2022)
+Problem: Let \(\vec{a}, \vec{b}, \vec{c}\) be three vectors such that \(|\vec{a}| = 1, |\vec{b}| = 2, |\vec{c}| = 3\) and \(\vec{a} \cdot \vec{b} = 0\). Find the maximum value of \([\vec{a} \, \vec{b} \, \vec{c}]\).
+
+Solution Approach:
+1. Use \([\vec{a} \, \vec{b} \, \vec{c}] = \vec{a} \cdot (\vec{b} \times \vec{c})\)
+2. Maximum when \(\vec{c}\) is perpendicular to both \(\vec{a}\) and \(\vec{b}\)
+3. Maximum value = \(|\vec{a}||\vec{b}||\vec{c}| = 1 \times 2 \times 3 = 6\)
+
+### Question 2 (JEE Main 2023)
+Problem: Find the distance from point (1, 2, 3) to the plane x + 2y + 2z = 10.
+
+Solution:
+Using formula: \(d = \frac{|1(1) + 2(2) + 2(3) - 10|}{\sqrt{1 + 4 + 4}} = \frac{|1 + 4 + 6 - 10|}{3} = \frac{1}{3}\)
+
+Answer: \(\frac{1}{3}\) units
+
+---
+
+## Summary
+
+Key formulas to remember:
+✓ Dot product: \(\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta\)
+✓ Cross product: \(|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin\theta\)
+✓ Scalar triple product: Volume of parallelepiped
+✓ Line equation: \(\vec{r} = \vec{a} + \lambda\vec{b}\)
+✓ Plane equation: \((\vec{r} - \vec{a}) \cdot \vec{n} = 0\)
+✓ Distance formulas for various configurations

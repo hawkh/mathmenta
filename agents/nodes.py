@@ -5,11 +5,18 @@ Each node represents a specialized agent in the problem-solving pipeline.
 import re
 import json
 from typing import Dict, Any, List, Optional
-from langchain_anthropic import ChatAnthropic
 from langchain.schema import HumanMessage, SystemMessage
 from config import Config
 from rag.retriever import get_retriever
 from memory.store import get_memory_store
+
+# Import appropriate LLM based on configuration
+if Config.USE_OLLAMA:
+    from langchain_ollama import ChatOllama
+    print(f"[Ollama] Using model: {Config.DEFAULT_MODEL}")
+else:
+    from langchain_anthropic import ChatAnthropic
+    print(f"[Anthropic] Using model: {Config.DEFAULT_MODEL}")
 
 
 class AgentNodes:
@@ -17,14 +24,22 @@ class AgentNodes:
     Collection of specialized agent nodes for mathematical problem solving.
     Each node has a specific role in the pipeline.
     """
-    
+
     def __init__(self):
         """Initialize agent nodes with LLM client."""
-        self.llm = ChatAnthropic(
-            model=Config.DEFAULT_MODEL,
-            temperature=0.3,
-            max_tokens=2048
-        )
+        if Config.USE_OLLAMA:
+            self.llm = ChatOllama(
+                model=Config.DEFAULT_MODEL,
+                base_url=Config.OLLAMA_BASE_URL,
+                temperature=0.3,
+                num_predict=2048
+            )
+        else:
+            self.llm = ChatAnthropic(
+                model=Config.DEFAULT_MODEL,
+                temperature=0.3,
+                max_tokens=2048
+            )
         self.retriever = get_retriever()
         self.memory = get_memory_store()
     

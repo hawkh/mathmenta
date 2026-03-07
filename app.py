@@ -456,20 +456,21 @@ def main():
     """Main application function."""
     # Initialize session
     initialize_session()
-    
+
+    # Render sidebar first
+    input_mode = render_sidebar()
+
     # Render header
     st.markdown('<h1 class="main-header">🧮 Math Mentor</h1>', unsafe_allow_html=True)
     st.markdown(
         '<p class="sub-header">Multi-Agent AI System for Mathematical Problem Solving</p>',
         unsafe_allow_html=True
     )
-    
-    # Render sidebar
-    input_mode = render_sidebar()
-    
+
     # Main content area
     if not st.session_state.processing_complete:
-        # Input section
+        # Input section - show immediately after header
+        st.divider()
         if input_mode == "Text":
             user_input = render_text_input()
             input_type = 'text'

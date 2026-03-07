@@ -11,13 +11,17 @@ load_dotenv()
 
 class Config:
     """Centralized configuration for the Math Mentor system."""
-    
+
     # API Keys
-    ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+    ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
     
+    # Ollama Configuration
+    OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+    USE_OLLAMA = os.getenv("USE_OLLAMA", "false").lower() == "true" or not os.getenv("ANTHROPIC_API_KEY", "").strip()
+
     # Model Settings
-    DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "claude-sonnet-4-20250514")
+    DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "llama3.3")
     EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
     
     # Confidence Thresholds for HITL

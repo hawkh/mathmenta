@@ -1,0 +1,367 @@
+# Trigonometry for JEE
+
+## Overview
+
+Trigonometry is a critical topic for JEE Main and Advanced, appearing in 2-4 questions annually. This chapter covers trigonometric functions, identities, equations, and their applications in geometry and calculus.
+
+---
+
+## 1. Basic Trigonometric Ratios
+
+### Definition
+For a right triangle with angle θ:
+- sin θ = opposite/hypotenuse
+- cos θ = adjacent/hypotenuse
+- tan θ = opposite/adjacent = sin θ/cos θ
+
+### Reciprocal Functions
+- cosec θ = 1/sin θ
+- sec θ = 1/cos θ
+- cot θ = 1/tan θ = cos θ/sin θ
+
+### Key Values
+| Angle | 0° | 30° | 45° | 60° | 90° |
+|-------|-----|-----|-----|-----|-----|
+| sin | 0 | 1/2 | 1/√2 | √3/2 | 1 |
+| cos | 1 | √3/2 | 1/√2 | 1/2 | 0 |
+| tan | 0 | 1/√3 | 1 | √3 | ∞ |
+
+---
+
+## 2. Fundamental Trigonometric Identities
+
+### Pythagorean Identities
+Formula: sin²θ + cos²θ = 1
+
+Derived Identities:
+- 1 + tan²θ = sec²θ
+- 1 + cot²θ = cosec²θ
+
+Conditions: Valid for all real θ where functions are defined.
+
+### Worked Example 1 (JEE Main 2022)
+Problem: If sin θ + cos θ = √2 cos θ, prove that tan θ = √2 - 1.
+
+Solution Steps:
+1. Start with: sin θ + cos θ = √2 cos θ
+2. Rearrange: sin θ = √2 cos θ - cos θ
+3. Factor: sin θ = (√2 - 1)cos θ
+4. Divide by cos θ: tan θ = √2 - 1
+5. Verified ✓
+
+Key Insight: When given sin θ + cos θ relationships, isolate and divide to get tan θ.
+
+---
+
+## 3. Compound Angle Formulas
+
+### Sum and Difference Formulas
+Formula: sin(A ± B) = sin A cos B ± cos A sin B
+Formula: cos(A ± B) = cos A cos B ∓ sin A sin B
+Formula: tan(A ± B) = (tan A ± tan B)/(1 ∓ tan A tan B)
+
+### Worked Example 2 (JEE Main 2021)
+Problem: Find the value of sin 75°.
+
+Solution Steps:
+1. Express 75° = 45° + 30°
+2. Apply formula: sin(45° + 30°) = sin 45° cos 30° + cos 45° sin 30°
+3. Substitute values:
+   - sin 45° = 1/√2, cos 30° = √3/2
+   - cos 45° = 1/√2, sin 30° = 1/2
+4. Calculate: (1/√2)(√3/2) + (1/√2)(1/2)
+5. Simplify: (√3 + 1)/(2√2)
+
+Answer: sin 75° = (√3 + 1)/(2√2)
+
+---
+
+## 4. Double Angle Formulas
+
+### Key Formulas
+Formula: sin 2θ = 2 sin θ cos θ
+Formula: cos 2θ = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ
+Formula: tan 2θ = 2tan θ/(1 - tan²θ)
+
+### Worked Example 3 (JEE Advanced 2020)
+Problem: If cos θ = 3/5, find cos 2θ.
+
+Solution Steps:
+1. Use formula: cos 2θ = 2cos²θ - 1
+2. Substitute: cos 2θ = 2(3/5)² - 1
+3. Calculate: cos 2θ = 2(9/25) - 1
+4. Simplify: cos 2θ = 18/25 - 25/25 = -7/25
+
+Answer: cos 2θ = -7/25
+
+Key Insight: Use the form of cos 2θ that matches given information.
+
+---
+
+## 5. Half Angle Formulas
+
+### Key Formulas
+Formula: sin(θ/2) = ±√[(1 - cos θ)/2]
+Formula: cos(θ/2) = ±√[(1 + cos θ)/2]
+Formula: tan(θ/2) = (1 - cos θ)/sin θ = sin θ/(1 + cos θ)
+
+Sign Convention:
+- Quadrant I (0° to 90°): All positive
+- Quadrant II (90° to 180°): sin positive
+- Quadrant III (180° to 270°): tan positive
+- Quadrant IV (270° to 360°): cos positive
+
+### Worked Example 4
+Problem: If cos θ = 1/3 and θ is in Quadrant I, find sin(θ/2).
+
+Solution Steps:
+1. Use formula: sin(θ/2) = √[(1 - cos θ)/2]
+2. Substitute: sin(θ/2) = √[(1 - 1/3)/2]
+3. Simplify: sin(θ/2) = √[(2/3)/2] = √(1/3)
+4. Final: sin(θ/2) = 1/√3
+
+Answer: sin(θ/2) = 1/√3
+
+---
+
+## 6. Product-to-Sum Formulas
+
+### Conversion Formulas
+Formula: 2 sin A cos B = sin(A + B) + sin(A - B)
+Formula: 2 cos A sin B = sin(A + B) - sin(A - B)
+Formula: 2 cos A cos B = cos(A + B) + cos(A - B)
+Formula: 2 sin A sin B = cos(A - B) - cos(A + B)
+
+### Worked Example 5 (JEE Main 2019)
+Problem: Find the value of 2 sin 75° cos 15°.
+
+Solution Steps:
+1. Use formula: 2 sin A cos B = sin(A + B) + sin(A - B)
+2. Identify: A = 75°, B = 15°
+3. Apply: sin(75° + 15°) + sin(75° - 15°)
+4. Simplify: sin 90° + sin 60°
+5. Evaluate: 1 + √3/2
+
+Answer: 2 sin 75° cos 15° = 1 + √3/2 = (2 + √3)/2
+
+---
+
+## 7. Sum-to-Product Formulas
+
+### Conversion Formulas
+Formula: sin C + sin D = 2 sin[(C+D)/2] cos[(C-D)/2]
+Formula: sin C - sin D = 2 cos[(C+D)/2] sin[(C-D)/2]
+Formula: cos C + cos D = 2 cos[(C+D)/2] cos[(C-D)/2]
+Formula: cos C - cos D = -2 sin[(C+D)/2] sin[(C-D)/2]
+
+### Worked Example 6
+Problem: Prove that cos 50° + cos 70° = 2 cos 60° cos 10°.
+
+Solution Steps:
+1. Use formula: cos C + cos D = 2 cos[(C+D)/2] cos[(C-D)/2]
+2. Identify: C = 70°, D = 50°
+3. Apply: 2 cos[(70°+50°)/2] cos[(70°-50°)/2]
+4. Simplify: 2 cos 60° cos 10°
+5. Verified ✓
+
+---
+
+## 8. Trigonometric Equations
+
+### General Solutions
+For sin θ = sin α: θ = nπ + (-1)ⁿα, where n ∈ Z
+For cos θ = cos α: θ = 2nπ ± α, where n ∈ Z
+For tan θ = tan α: θ = nπ + α, where n ∈ Z
+
+### Worked Example 7 (JEE Main 2023)
+Problem: Solve sin θ = 1/2 for θ ∈ [0, 2π].
+
+Solution Steps:
+1. Reference angle: sin⁻¹(1/2) = π/6 (30°)
+2. Sine is positive in Quadrants I and II
+3. Solutions: θ = π/6 and θ = π - π/6 = 5π/6
+4. Check interval: Both in [0, 2π] ✓
+
+Answer: θ = π/6, 5π/6
+
+### Worked Example 8 (JEE Advanced)
+Problem: Solve cos 2θ + cos θ = 0 for θ ∈ [0, 2π].
+
+Solution Steps:
+1. Use double angle: cos 2θ = 2cos²θ - 1
+2. Substitute: 2cos²θ - 1 + cos θ = 0
+3. Rearrange: 2cos²θ + cos θ - 1 = 0
+4. Factor: (2cos θ - 1)(cos θ + 1) = 0
+5. Solve each factor:
+   - cos θ = 1/2 → θ = π/3, 5π/3
+   - cos θ = -1 → θ = π
+6. All solutions in [0, 2π]: θ = π/3, π, 5π/3
+
+Answer: θ = π/3, π, 5π/3
+
+---
+
+## 9. Inverse Trigonometric Functions
+
+### Principal Values
+- sin⁻¹x: [-π/2, π/2]
+- cos⁻¹x: [0, π]
+- tan⁻¹x: (-π/2, π/2)
+
+### Key Properties
+Formula: sin⁻¹x + cos⁻¹x = π/2
+Formula: tan⁻¹x + cot⁻¹x = π/2
+Formula: tan⁻¹x + tan⁻¹y = tan⁻¹[(x+y)/(1-xy)], for xy < 1
+
+### Worked Example 9 (JEE Main 2020)
+Problem: Find the value of tan⁻¹(1) + tan⁻¹(2) + tan⁻¹(3).
+
+Solution Steps:
+1. tan⁻¹(1) = π/4
+2. Use formula for tan⁻¹x + tan⁻¹y:
+   tan⁻¹(2) + tan⁻¹(3) = tan⁻¹[(2+3)/(1-2×3)] = tan⁻¹(5/-5) = tan⁻¹(-1) = -π/4
+3. But we need to add π since 2×3 > 1
+4. So tan⁻¹(2) + tan⁻¹(3) = π - π/4 = 3π/4
+5. Total: π/4 + 3π/4 = π
+
+Answer: tan⁻¹(1) + tan⁻¹(2) + tan⁻¹(3) = π
+
+---
+
+## 10. Graphs of Trigonometric Functions
+
+### Key Characteristics
+
+**sin x:**
+- Domain: ℝ
+- Range: [-1, 1]
+- Period: 2π
+- Odd function: sin(-x) = -sin x
+
+**cos x:**
+- Domain: ℝ
+- Range: [-1, 1]
+- Period: 2π
+- Even function: cos(-x) = cos x
+
+**tan x:**
+- Domain: ℝ - {(2n+1)π/2}
+- Range: ℝ
+- Period: π
+- Odd function
+
+---
+
+## 11. Advanced Problem-Solving Techniques
+
+### Technique 1: Auxiliary Angle Method
+For expressions like a sin θ + b cos θ:
+1. Write as R sin(θ + α) where R = √(a² + b²) and tan α = b/a
+
+### Worked Example 10 (JEE Advanced 2019)
+Problem: Find the maximum value of 3 sin θ + 4 cos θ.
+
+Solution Steps:
+1. Identify: a = 3, b = 4
+2. Maximum value = R = √(a² + b²)
+3. Calculate: R = √(9 + 16) = √25 = 5
+
+Answer: Maximum value = 5
+
+Key Insight: Maximum of a sin θ + b cos θ is always √(a² + b²).
+
+### Technique 2: Substitution Method
+For complex trigonometric expressions, substitute:
+- t = tan(θ/2) for rational expressions
+- sin θ = x or cos θ = x for polynomial-like expressions
+
+### Worked Example 11 (JEE Advanced 2021)
+Problem: If tan θ = 3/4, find sin 2θ.
+
+Solution Steps:
+1. Use formula: sin 2θ = 2tan θ/(1 + tan²θ)
+2. Substitute: sin 2θ = 2(3/4)/(1 + 9/16)
+3. Simplify: sin 2θ = (3/2)/(25/16)
+4. Calculate: sin 2θ = (3/2) × (16/25) = 24/25
+
+Answer: sin 2θ = 24/25
+
+---
+
+## 12. JEE Previous Year Questions
+
+### Question 1 (JEE Main 2023)
+Problem: If sin θ + cos θ = 1/5, find tan θ.
+
+Solution Approach:
+1. Square both sides: sin²θ + cos²θ + 2sin θ cos θ = 1/25
+2. Use identity: 1 + 2sin θ cos θ = 1/25
+3. Solve: sin θ cos θ = -12/25
+4. Use quadratic: t² - (1/5)t - 12/25 = 0 where t = sin θ or cos θ
+5. Find sin θ and cos θ, then tan θ
+
+### Question 2 (JEE Advanced 2022)
+Problem: Find the number of solutions of cos x + cos 2x + cos 3x = 0 in [0, 2π].
+
+Solution Approach:
+1. Use sum-to-product on cos x + cos 3x
+2. Factor the resulting expression
+3. Solve each factor separately
+4. Count solutions in the given interval
+
+---
+
+## 13. Important Results to Remember
+
+1. sin²θ = (1 - cos 2θ)/2
+2. cos²θ = (1 + cos 2θ)/2
+3. sin 3θ = 3sin θ - 4sin³θ
+4. cos 3θ = 4cos³θ - 3cos θ
+5. tan 3θ = (3tan θ - tan³θ)/(1 - 3tan²θ)
+6. sin⁻¹x + sin⁻¹y = sin⁻¹[x√(1-y²) + y√(1-x²)]
+7. cos⁻¹x + cos⁻¹y = cos⁻¹[xy + √(1-x²)√(1-y²)]
+8. Range of sin x and cos x is always [-1, 1]
+9. Range of tan x and cot x is ℝ
+10. Period of sin(ax+b) is 2π/|a|
+
+---
+
+## 14. Common Mistakes to Avoid
+
+1. **Sign errors in quadrant determination** - Always draw the unit circle
+2. **Forgetting general solutions** - Remember to add nπ or 2nπ
+3. **Domain restrictions** - Check where functions are defined
+4. **Principal value confusion** - Know the range of inverse functions
+5. **Formula misapplication** - Verify conditions before using formulas
+
+---
+
+## 15. Practice Problems
+
+### Level 1 (Basic)
+1. Prove: (1 + tan²θ)/(1 + cot²θ) = tan²θ
+2. Solve: sin 2θ = 1/2 for θ ∈ [0, 2π]
+3. Find: cos 15° without calculator
+
+### Level 2 (Intermediate)
+4. If tan θ + cot θ = 2, find tan²θ + cot²θ
+5. Solve: 2sin²θ - 3sin θ + 1 = 0
+6. Prove: (sin A + sin B)/(cos A + cos B) = tan[(A+B)/2]
+
+### Level 3 (Advanced)
+7. Find range of: 5 sin x + 12 cos x
+8. Solve: sin x + cos x = √2 sin 2x
+9. Prove: tan⁻¹(1/2) + tan⁻¹(1/3) = π/4
+
+---
+
+## Summary
+
+Trigonometry for JEE requires:
+✓ Mastery of all identities
+✓ Quick recognition of which formula to apply
+✓ Practice with previous year questions
+✓ Understanding of graphs and transformations
+✓ Ability to handle inverse trigonometric functions
+
+Key to success: Practice 5-10 problems daily, focusing on identity manipulation and equation solving.
